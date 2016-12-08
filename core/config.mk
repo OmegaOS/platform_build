@@ -167,7 +167,7 @@ include $(BUILD_SYSTEM)/envsetup.mk
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(OUT_DIR) $(SCAN_EXCLUDE_DIRS) .repo .git)
 
--include vendor/aosp/config/BoardConfigCM.mk
+-include vendor/omega/config/BoardConfigCM.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
@@ -874,6 +874,6 @@ include $(BUILD_SYSTEM)/qcom_target.mk
 
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
-$(eval include vendor/aosp/sepolicy/sepolicy.mk)
+$(eval include vendor/omega/sepolicy/sepolicy.mk)
 
 include $(BUILD_SYSTEM)/dumpvar.mk
