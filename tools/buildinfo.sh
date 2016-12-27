@@ -26,6 +26,9 @@ fi
 if [ -n "$AB_OTA_UPDATER" ] ; then
   echo "ro.build.ab_update=$AB_OTA_UPDATER"
 fi
+if [ -n "$PRODUCT_MODEL" ] ; then
+  echo "ro.product.model=$PRODUCT_MODEL"
+fi
 echo "ro.product.brand=$PRODUCT_BRAND"
 echo "ro.product.name=$PRODUCT_NAME"
 echo "ro.product.board=$TARGET_BOOTLOADER_BOARD_NAME"
